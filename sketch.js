@@ -7,7 +7,7 @@ let threshold = 0.10;
 
 let puppyGif;
 let puppyX, puppyY;
-let puppyScale = 5;
+let puppyScale = 2;
 
 let state = "idle"; // idle, Main, SlideLeft, SlideRight
 let timer = 0;
@@ -33,7 +33,7 @@ function setup() {
 
   
     // Lock mobile gestures
-    lockGestures();
+    //lockGestures();
 }
 
 function draw() {
