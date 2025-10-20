@@ -2,8 +2,8 @@
 
 let mic;
 let micLevel = 0;
-let micMultiplier = 8;
-let threshold = 0.20;
+let micMultiplier = 10;
+let threshold = 0.10;
 
 let puppyGif;
 let puppyX, puppyY;
