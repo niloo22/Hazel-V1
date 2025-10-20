@@ -30,6 +30,10 @@ function setup() {
   imageMode(CENTER);
   textAlign(CENTER, CENTER);
   textSize(22);
+
+  
+    // Lock mobile gestures
+    lockGestures();
 }
 
 function draw() {
