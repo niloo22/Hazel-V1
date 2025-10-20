@@ -2,12 +2,12 @@
 
 let mic;
 let micLevel = 0;
-let micMultiplier = 5;
-let threshold = 0.25;
+let micMultiplier = 8;
+let threshold = 0.20;
 
 let puppyGif;
 let puppyX, puppyY;
-let puppyScale = 2;
+let puppyScale = 5;
 
 let state = "idle"; // idle, Main, SlideLeft, SlideRight
 let timer = 0;
