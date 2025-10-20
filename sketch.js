@@ -7,7 +7,7 @@ let threshold = 0.15;
 
 let puppyGif;
 let puppyX, puppyY;
-let puppyScale = 2;
+let puppyScale = 5;
 
 let state = "idle"; // idle, Main, SlideLeft, SlideRight
 let timer = 0;
