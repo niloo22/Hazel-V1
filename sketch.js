@@ -2,8 +2,8 @@
 
 let mic;
 let micLevel = 0;
-let micMultiplier = 20;
-let threshold = 0.10;
+let micMultiplier = 10;
+let threshold = 0.15;
 
 let puppyGif;
 let puppyX, puppyY;
@@ -30,10 +30,8 @@ function setup() {
   imageMode(CENTER);
   textAlign(CENTER, CENTER);
   textSize(22);
-
   
-    // Lock mobile gestures
-    //lockGestures();
+    lockGestures();
 }
 
 function draw() {
