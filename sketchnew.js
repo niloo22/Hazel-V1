@@ -94,6 +94,15 @@ function draw() {
       break;
   }
 
+   // Show hint after silence
+  if (state === "idle") {
+    if (millis() - timer > 4000) {
+      fill(200);
+      textSize(25);
+      text("Try calling her name!", width / 2, height / 2 );
+    }
+  }
+
   // debug mic info
   fill(255);
   textSize(18);
