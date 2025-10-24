@@ -1,44 +1,3 @@
-//===========================================//
-
-let mic;
-let micLevel = 0;
-let micMultiplier = 10;
-let threshold = 0.15;
-
-let puppyGif;
-let puppyX, puppyY;
-let puppyScale = 5;
-
-let state = "idle"; // idle, Main, SlideLeft, SlideRight
-let timer = 0;
-let SlideRightDuration = 1000; // 1Sec SlideRight
-let SlideRightStartX = 0;
-
-function preload() {
-  puppyGif = loadImage('gifs/puppy.gif');
-}
-
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-
-  mic = new p5.AudioIn();
-  mic.start();
-
-  puppyX = width / 2;
-  puppyY = height / 2;
-
-  imageMode(CENTER);
-  textAlign(CENTER, CENTER);
-  textSize(22);
-  
-    lockGestures();
-}
-
-function draw() {
-  background(30, 30, 40); 
-
-  micLevel = mic.getLevel() * micMultiplier;
-
   switch (state) {
 
     case "idle":
@@ -91,16 +50,3 @@ function draw() {
         state = "Main";
         timer = millis();
       }
-      break;
-  }
-
-  // debug mic info
-  fill(255);
-  textSize(18);
-  text("Mic Level: " + nf(micLevel, 1, 3), width / 2, height - 40);
-  text("Threshold: " + threshold, width / 2, height - 20);
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
